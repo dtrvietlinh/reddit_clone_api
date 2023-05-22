@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "87b7e2f9-4401-484f-a871-36c6ebd92274",
+		"name": "PointController",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "26048557-87b7e2f9-4401-484f-a871-36c6ebd92274"
+	},
+	"item": [
+		{
+			"name": "voteComment",
+			"id": "02bd5ec5-b9e9-409e-a36f-c6c71f09dd84",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"voteType\":\"DOWNVOTE\",\r\n    \"id\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{reddit}}/api/points",
+					"host": [
+						"{{reddit}}"
+					],
+					"path": [
+						"api",
+						"points"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "3d4b5121-73bd-465c-bae9-718f749f1fdf",
+					"name": "downvote",
+					"originalRequest": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"type": "any"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "callBackUrl",
+									"type": "any"
+								},
+								{
+									"key": "authUrl",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://localhost:8180/realms/keycloak-demo/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "demo-client",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "Z3IaRD8ZQo3T1IK2FgJ7C5xpc3FSxUET",
+									"type": "string"
+								},
+								{
+									"key": "clientAuth",
+									"type": "any"
+								},
+								{
+									"key": "grantType",
+									"type": "any"
+								},
+								{
+									"key": "scope",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "case-sensitive",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "test",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"type": "any"
+								},
+								{
+									"key": "redirectUri",
+									"type": "any"
+								},
+								{
+									"key": "refreshToken",
+									"type": "any"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"voteType\":\"DOWNVOTE\",\r\n    \"id\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{reddit}}/api/points",
+							"host": [
+								"{{reddit}}"
+							],
+							"path": [
+								"api",
+								"points"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 14:18:40 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"created\",\n    \"message\": \"successfully\",\n    \"data\": \"\"\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"id": "9ded213e-bb15-42dc-a0b0-a8eea4853590",
+			"key": "voteComment",
+			"value": "http://localhost:8080/api/points"
+		}
+	]
+}

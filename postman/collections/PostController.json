@@ -1,0 +1,1172 @@
+{
+	"info": {
+		"_postman_id": "9ec1bdf6-0ba9-4924-9b2a-047a31d4a534",
+		"name": "PostController",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "26048557-9ec1bdf6-0ba9-4924-9b2a-047a31d4a534"
+	},
+	"item": [
+		{
+			"name": "createPost",
+			"id": "2d31ab55-99d1-4534-a341-abebf35b725a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{client-secret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{client-id}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{keycloak}}/realms/{{realm}}/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "keycloak-demo",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"subredditName\":\"firstReddit\",\r\n     \"postName\":\"test feature again\",\r\n     \"url\":\"http://google.com\",\r\n     \"description\":\"nothing\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{reddit}}/api/posts",
+					"host": [
+						"{{reddit}}"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "dfd7d1e7-87ed-4617-adde-a3b436aa004d",
+					"name": "createPost",
+					"originalRequest": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"type": "any"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "callBackUrl",
+									"type": "any"
+								},
+								{
+									"key": "authUrl",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://localhost:8180/realms/keycloak-demo/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "demo-client",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "Z3IaRD8ZQo3T1IK2FgJ7C5xpc3FSxUET",
+									"type": "string"
+								},
+								{
+									"key": "clientAuth",
+									"type": "any"
+								},
+								{
+									"key": "grantType",
+									"type": "any"
+								},
+								{
+									"key": "scope",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "case-sensitive",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "test",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"type": "any"
+								},
+								{
+									"key": "redirectUri",
+									"type": "any"
+								},
+								{
+									"key": "refreshToken",
+									"type": "any"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"subredditName\":\"firstReddit\",\r\n     \"postName\":\"test feature again\",\r\n     \"url\":\"http://google.com\",\r\n     \"description\":\"nothing\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{reddit}}/api/posts",
+							"host": [
+								"{{reddit}}"
+							],
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 14:01:53 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"Created!\",\n    \"message\": \"Post has been created\",\n    \"data\": {\n        \"id\": 1,\n        \"postName\": \"test feature again\",\n        \"url\": \"http://google.com\",\n        \"description\": \"nothing\",\n        \"username\": \"user5\",\n        \"subredditName\": \"firstReddit\",\n        \"voteCount\": 1,\n        \"commentCount\": 0,\n        \"duration\": \"Just now\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "getPosts",
+			"id": "9244bbd1-eac1-4e08-8a49-9b18260cf9c8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientSecret",
+							"value": "{{client-secret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{client-id}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{keycloak}}/realms/{{realm}}/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "tokenName",
+							"value": "keycloak-demo",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{reddit}}/api/posts/",
+					"host": [
+						"{{reddit}}"
+					],
+					"path": [
+						"api",
+						"posts",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "8a409c98-99df-4c26-b580-35ea37b6177d",
+					"name": "getPosts",
+					"originalRequest": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"type": "any"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "callBackUrl",
+									"type": "any"
+								},
+								{
+									"key": "authUrl",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://localhost:8180/realms/keycloak-demo/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "demo-client",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "Z3IaRD8ZQo3T1IK2FgJ7C5xpc3FSxUET",
+									"type": "string"
+								},
+								{
+									"key": "clientAuth",
+									"type": "any"
+								},
+								{
+									"key": "grantType",
+									"type": "any"
+								},
+								{
+									"key": "scope",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "case-sensitive",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "test",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"type": "any"
+								},
+								{
+									"key": "redirectUri",
+									"type": "any"
+								},
+								{
+									"key": "refreshToken",
+									"type": "any"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{reddit}}/api/posts/",
+							"host": [
+								"{{reddit}}"
+							],
+							"path": [
+								"api",
+								"posts",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 14:14:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"postName\": \"test feature again\",\n        \"url\": \"http://google.com\",\n        \"description\": \"nothing\",\n        \"username\": \"user5\",\n        \"subredditName\": \"firstReddit\",\n        \"voteCount\": 2,\n        \"commentCount\": 1,\n        \"duration\": \"13 minutes ago\"\n    },\n    {\n        \"id\": 2,\n        \"postName\": \"test feature again\",\n        \"url\": \"http://google.com\",\n        \"description\": \"nothing\",\n        \"username\": \"vietlinh\",\n        \"subredditName\": \"firstReddit\",\n        \"voteCount\": 1,\n        \"commentCount\": 0,\n        \"duration\": \"Just now\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "getPostsBySubreddit",
+			"id": "a2fc5182-23a5-4c3d-b62c-8869f395d6ad",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{client-secret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{client-id}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{keycloak}}/realms/{{realm}}/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "tokenName",
+							"value": "keycloak-demo",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{reddit}}/api/posts/by-subreddit/{id}",
+					"host": [
+						"{{reddit}}"
+					],
+					"path": [
+						"api",
+						"posts",
+						"by-subreddit",
+						"{id}"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "029c08b3-2f8f-42ce-8e5a-15aaf02473e6",
+					"name": "getPostsBySubreddit",
+					"originalRequest": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"type": "any"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "callBackUrl",
+									"type": "any"
+								},
+								{
+									"key": "authUrl",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://localhost:8180/realms/keycloak-demo/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "demo-client",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "Z3IaRD8ZQo3T1IK2FgJ7C5xpc3FSxUET",
+									"type": "string"
+								},
+								{
+									"key": "clientAuth",
+									"type": "any"
+								},
+								{
+									"key": "grantType",
+									"type": "any"
+								},
+								{
+									"key": "scope",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "case-sensitive",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "test",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"type": "any"
+								},
+								{
+									"key": "redirectUri",
+									"type": "any"
+								},
+								{
+									"key": "refreshToken",
+									"type": "any"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{reddit}}/api/posts/by-subreddit/1",
+							"host": [
+								"{{reddit}}"
+							],
+							"path": [
+								"api",
+								"posts",
+								"by-subreddit",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 14:15:33 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"postName\": \"test feature again\",\n        \"url\": \"http://google.com\",\n        \"description\": \"nothing\",\n        \"username\": \"user5\",\n        \"subredditName\": \"firstReddit\",\n        \"voteCount\": 2,\n        \"commentCount\": 1,\n        \"duration\": \"14 minutes ago\"\n    },\n    {\n        \"id\": 2,\n        \"postName\": \"test feature again\",\n        \"url\": \"http://google.com\",\n        \"description\": \"nothing\",\n        \"username\": \"vietlinh\",\n        \"subredditName\": \"firstReddit\",\n        \"voteCount\": 1,\n        \"commentCount\": 0,\n        \"duration\": \"1 minute ago\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "getPostsByUser",
+			"id": "b11a6c46-1be7-47e2-86e9-d4498d1d71e9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{client-secret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{client-id}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{keycloak}}/realms/{{realm}}/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "tokenName",
+							"value": "keycloak-demo",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{reddit}}/api/posts/by-user/{username}",
+					"host": [
+						"{{reddit}}"
+					],
+					"path": [
+						"api",
+						"posts",
+						"by-user",
+						"{username}"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "46ad4df7-d69a-4ba8-a034-96910720b426",
+					"name": "getPostsByUser",
+					"originalRequest": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"type": "any"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "callBackUrl",
+									"type": "any"
+								},
+								{
+									"key": "authUrl",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://localhost:8180/realms/keycloak-demo/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "demo-client",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "Z3IaRD8ZQo3T1IK2FgJ7C5xpc3FSxUET",
+									"type": "string"
+								},
+								{
+									"key": "clientAuth",
+									"type": "any"
+								},
+								{
+									"key": "grantType",
+									"type": "any"
+								},
+								{
+									"key": "scope",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "case-sensitive",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "test",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"type": "any"
+								},
+								{
+									"key": "redirectUri",
+									"type": "any"
+								},
+								{
+									"key": "refreshToken",
+									"type": "any"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{reddit}}/api/posts/by-user/user5",
+							"host": [
+								"{{reddit}}"
+							],
+							"path": [
+								"api",
+								"posts",
+								"by-user",
+								"user5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 14:13:53 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"postName\": \"test feature again\",\n        \"url\": \"http://google.com\",\n        \"description\": \"nothing\",\n        \"username\": \"user5\",\n        \"subredditName\": \"firstReddit\",\n        \"voteCount\": 2,\n        \"commentCount\": 1,\n        \"duration\": \"12 minutes ago\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "getPostById",
+			"id": "8ad9f2d6-009e-4520-bc64-8aeff2b9f81b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{client-secret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{client-id}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{keycloak}}/realms/{{realm}}/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "tokenName",
+							"value": "keycloak-demo",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{reddit}}/api/posts/{id}",
+					"host": [
+						"{{reddit}}"
+					],
+					"path": [
+						"api",
+						"posts",
+						"{id}"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "54917ad4-f1df-4b4d-9133-448bae56bfe6",
+					"name": "getPostById",
+					"originalRequest": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"type": "any"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "callBackUrl",
+									"type": "any"
+								},
+								{
+									"key": "authUrl",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://localhost:8180/realms/keycloak-demo/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "demo-client",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "Z3IaRD8ZQo3T1IK2FgJ7C5xpc3FSxUET",
+									"type": "string"
+								},
+								{
+									"key": "clientAuth",
+									"type": "any"
+								},
+								{
+									"key": "grantType",
+									"type": "any"
+								},
+								{
+									"key": "scope",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "case-sensitive",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "test",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"type": "any"
+								},
+								{
+									"key": "redirectUri",
+									"type": "any"
+								},
+								{
+									"key": "refreshToken",
+									"type": "any"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{reddit}}/api/posts/1",
+							"host": [
+								"{{reddit}}"
+							],
+							"path": [
+								"api",
+								"posts",
+								"1"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 14:13:21 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"ok\",\n    \"message\": \"Post found\",\n    \"data\": {\n        \"id\": 1,\n        \"postName\": \"test feature again\",\n        \"url\": \"http://google.com\",\n        \"description\": \"nothing\",\n        \"username\": \"user5\",\n        \"subredditName\": \"firstReddit\",\n        \"voteCount\": 2,\n        \"commentCount\": 1,\n        \"duration\": \"11 minutes ago\"\n    }\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"id": "c880a03a-6495-44dd-b0a2-69bc270f46d0",
+			"key": "post",
+			"value": "http://localhost:8080/api/posts"
+		}
+	]
+}

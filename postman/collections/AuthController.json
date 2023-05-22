@@ -1,0 +1,408 @@
+{
+	"info": {
+		"_postman_id": "956af16b-ff03-425a-867d-29b0c69e2737",
+		"name": "AuthController",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "26048557-956af16b-ff03-425a-867d-29b0c69e2737"
+	},
+	"item": [
+		{
+			"name": "sign-up",
+			"id": "3f0103ed-9c94-4eb0-ac71-c2336ad2d3f0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"vietkun1111@gmail.com\",\r\n    \"username\":\"vietlinh\",\r\n    \"password\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{reddit}}/api/auth/signup",
+					"host": [
+						"{{reddit}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "76ca499d-ede3-4b9a-ba38-b5b5368a3691",
+					"name": "mailtrap(12s~)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"vietkun1111@gmail.com\",\r\n    \"username\":\"vietlinh\",\r\n    \"password\":\"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{reddit}}/api/auth/signup",
+							"host": [
+								"{{reddit}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 10:46:25 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"ok\",\n    \"message\": \"User Registration Successfully. Please verify your email to fully set up your account\",\n    \"data\": {\n        \"userId\": 2,\n        \"password\": \"bAVL8tlinZE+zzcZolPtJBfwii0euM3igxW85qvNDepPVPDy/mkOnszwUc/MZy7w\",\n        \"username\": \"user5\",\n        \"email\": \"user5@gmail.com\",\n        \"created\": \"2023-05-21T10:46:14.681772594Z\",\n        \"enabled\": true\n    }\n}"
+				},
+				{
+					"id": "2c408589-3586-482a-a772-09cd0de8f61e",
+					"name": "gmail(3s)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"vietkun1111@gmail.com\",\r\n    \"username\":\"vietlinh\",\r\n    \"password\":\"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{reddit}}/api/auth/signup",
+							"host": [
+								"{{reddit}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 13:37:08 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"ok\",\n    \"message\": \"User Registration Successfully. Please verify your email to fully set up your account\",\n    \"data\": {\n        \"userId\": 3,\n        \"password\": \"nPMFKRm4x7APOsRnfQIwVULgYsJN4w78l2BqiihaNiOygh7tFNcgOOWecknFTtpR\",\n        \"username\": \"vietlinh\",\n        \"email\": \"vietkun1111@gmail.com\",\n        \"created\": \"2023-05-21T13:37:05.639092934Z\",\n        \"enabled\": true\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"id": "c4561d2e-5584-4e9e-8226-d282462bfd5b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"vietlinh\",\r\n    \"password\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{reddit}}/api/auth/login",
+					"host": [
+						"{{reddit}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "3fab28de-3d91-4551-af35-5720efb21601",
+					"name": "wrong pwd or username",
+					"originalRequest": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"vietlinh\",\r\n    \"password\":\"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{reddit}}/api/auth/login",
+							"host": [
+								"{{reddit}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 10:47:33 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "24"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "Invalid user credentials"
+				},
+				{
+					"id": "2c313ad5-7ce6-44f5-ad52-6ed4c6ff0d9f",
+					"name": "unverified email",
+					"originalRequest": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"vietlinh\",\r\n    \"password\":\"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{reddit}}/api/auth/login",
+							"host": [
+								"{{reddit}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 10:48:17 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "53"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "Account is not fully set up, please verify your email"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"id": "82eb5345-c1f1-441a-a978-85771f1aeba4",
+			"key": "auth",
+			"value": "http://localhost:8080/api/auth"
+		}
+	]
+}

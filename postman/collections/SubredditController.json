@@ -1,0 +1,712 @@
+{
+	"info": {
+		"_postman_id": "7bcf6f33-8b50-476b-ab1d-bc39e359b33c",
+		"name": "SubredditController",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "26048557-7bcf6f33-8b50-476b-ab1d-bc39e359b33c"
+	},
+	"item": [
+		{
+			"name": "createSubreddit",
+			"id": "6a04d8d8-237c-4eda-b6e3-cdccd9ef426a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{client-secret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{client-id}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{keycloak}}/realms/{{realm}}/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "keycloak-demo",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"fourthReddit\",\r\n    \"description\":\"test deployment\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{reddit}}/api/subreddit",
+					"host": [
+						"{{reddit}}"
+					],
+					"path": [
+						"api",
+						"subreddit"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "02a61865-0b24-4423-a2ac-982bf6d17e5d",
+					"name": "createSubreddit",
+					"originalRequest": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"type": "any"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "callBackUrl",
+									"type": "any"
+								},
+								{
+									"key": "authUrl",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{keycloak}}/realms/{{realm}}/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "{{client-id}}",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "{{client-secret}}",
+									"type": "string"
+								},
+								{
+									"key": "clientAuth",
+									"type": "any"
+								},
+								{
+									"key": "grantType",
+									"type": "any"
+								},
+								{
+									"key": "scope",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user5",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "test",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"type": "any"
+								},
+								{
+									"key": "redirectUri",
+									"type": "any"
+								},
+								{
+									"key": "refreshToken",
+									"type": "any"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"fourthReddit\",\r\n    \"description\":\"test deployment\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{reddit}}/api/subreddit",
+							"host": [
+								"{{reddit}}"
+							],
+							"path": [
+								"api",
+								"subreddit"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 13:59:03 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"Created!\",\n    \"message\": \"Subreddit has been created\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"firstReddit\",\n        \"moderator\": null,\n        \"description\": \"test deployment\",\n        \"numberOfPosts\": null\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "getSubreddits",
+			"id": "bdb02240-7529-4f8e-b8cd-3d0bfc79e311",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{client-secret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{client-id}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{keycloak}}/realms/{{realm}}/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "tokenName",
+							"value": "keycloak-demo",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{reddit}}/api/subreddit",
+					"host": [
+						"{{reddit}}"
+					],
+					"path": [
+						"api",
+						"subreddit"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "ac5a00c0-b859-4c03-bdd8-a5605bd3dbfe",
+					"name": "getSubreddits",
+					"originalRequest": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"type": "any"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "callBackUrl",
+									"type": "any"
+								},
+								{
+									"key": "authUrl",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://localhost:8180/realms/keycloak-demo/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "demo-client",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "Z3IaRD8ZQo3T1IK2FgJ7C5xpc3FSxUET",
+									"type": "string"
+								},
+								{
+									"key": "clientAuth",
+									"type": "any"
+								},
+								{
+									"key": "grantType",
+									"type": "any"
+								},
+								{
+									"key": "scope",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "case-sensitive",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "test",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"type": "any"
+								},
+								{
+									"key": "redirectUri",
+									"type": "any"
+								},
+								{
+									"key": "refreshToken",
+									"type": "any"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{reddit}}/api/subreddit",
+							"host": [
+								"{{reddit}}"
+							],
+							"path": [
+								"api",
+								"subreddit"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 14:19:23 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"ok\",\n    \"message\": \"Succeeded\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"firstReddit\",\n            \"moderator\": \"user5\",\n            \"description\": \"test deployment\",\n            \"numberOfPosts\": 2\n        },\n        {\n            \"id\": 2,\n            \"name\": \"secondReddit\",\n            \"moderator\": \"user5\",\n            \"description\": \"test deployment\",\n            \"numberOfPosts\": 0\n        },\n        {\n            \"id\": 3,\n            \"name\": \"thirdReddit\",\n            \"moderator\": \"user5\",\n            \"description\": \"test deployment\",\n            \"numberOfPosts\": 0\n        },\n        {\n            \"id\": 4,\n            \"name\": \"fourthReddit\",\n            \"moderator\": \"vietlinh\",\n            \"description\": \"test deployment\",\n            \"numberOfPosts\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "getSubreddit",
+			"id": "e246bb47-dfe5-4a8c-b766-b93d99367730",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{client-secret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{client-id}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{keycloak}}/realms/{{realm}}/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "tokenName",
+							"value": "keycloak-demo",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{reddit}}/api/subreddit/{subreddit-name}",
+					"host": [
+						"{{reddit}}"
+					],
+					"path": [
+						"api",
+						"subreddit",
+						"{subreddit-name}"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "47c8dd36-035a-45a3-a0e0-3179fa228bf5",
+					"name": "getSubreddit",
+					"originalRequest": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"type": "any"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "callBackUrl",
+									"type": "any"
+								},
+								{
+									"key": "authUrl",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://localhost:8180/realms/keycloak-demo/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "demo-client",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "Z3IaRD8ZQo3T1IK2FgJ7C5xpc3FSxUET",
+									"type": "string"
+								},
+								{
+									"key": "clientAuth",
+									"type": "any"
+								},
+								{
+									"key": "grantType",
+									"type": "any"
+								},
+								{
+									"key": "scope",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "case-sensitive",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "test",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"type": "any"
+								},
+								{
+									"key": "redirectUri",
+									"type": "any"
+								},
+								{
+									"key": "refreshToken",
+									"type": "any"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{reddit}}/api/subreddit/fourthReddit",
+							"host": [
+								"{{reddit}}"
+							],
+							"path": [
+								"api",
+								"subreddit",
+								"fourthReddit"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 14:22:32 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"ok\",\n    \"message\": \"Subreddit found\",\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"fourthReddit\",\n        \"moderator\": \"vietlinh\",\n        \"description\": \"test deployment\",\n        \"numberOfPosts\": 0\n    }\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"id": "82213af8-fcea-4d46-885c-a81d00abeec8",
+			"key": "subreddit",
+			"value": "http://localhost:8080/api/subreddit"
+		}
+	]
+}

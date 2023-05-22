@@ -1,0 +1,930 @@
+{
+	"info": {
+		"_postman_id": "6392299b-15cb-4f21-917f-92fc6c2dd9fd",
+		"name": "UserPoviderController",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "26048557-6392299b-15cb-4f21-917f-92fc6c2dd9fd"
+	},
+	"item": [
+		{
+			"name": "getUsers",
+			"id": "8c74ef71-116f-448e-8054-7fd45bc8922a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "password",
+							"value": "{{pwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{admin}}",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{client-secret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{client-id}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{keycloak}}/realms/{{realm}}/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "tokenName",
+							"value": "keycloak-demo",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{reddit}}/keycloak/user-provider?search=*&size=7&page=0",
+					"host": [
+						"{{reddit}}"
+					],
+					"path": [
+						"keycloak",
+						"user-provider"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "*"
+						},
+						{
+							"key": "size",
+							"value": "7"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "9f7265e4-f8c6-43db-ad6b-eda03ec27c68",
+					"name": "getUsers",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{reddit}}/keycloak/user-provider?search=*&size=7&page=0",
+							"host": [
+								"{{reddit}}"
+							],
+							"path": [
+								"keycloak",
+								"user-provider"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "*"
+								},
+								{
+									"key": "size",
+									"value": "7"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 14:03:36 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"username\": \"strtrrt\",\n        \"email\": \"etrtet@gmail.com\",\n        \"created\": 1684665383,\n        \"enabled\": true\n    },\n    {\n        \"username\": \"user5\",\n        \"email\": \"user5@gmail.com\",\n        \"created\": 1684665974,\n        \"enabled\": true\n    },\n    {\n        \"username\": \"vietlinh\",\n        \"email\": \"vietkun1111@gmail.com\",\n        \"created\": 1684676225,\n        \"enabled\": true\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "getUserById",
+			"id": "15342a8a-b862-4f1b-b6fd-d94aa813e995",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "password",
+							"value": "{{pwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{admin}}",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{client-secret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{client-id}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{keycloak}}/realms/{{realm}}/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "tokenName",
+							"value": "keycloak-demo",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{reddit}}/keycloak/user-provider/{username}",
+					"host": [
+						"{{reddit}}"
+					],
+					"path": [
+						"keycloak",
+						"user-provider",
+						"{username}"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "05e41306-02cb-42af-937f-02ba060b5acd",
+					"name": "getUserById",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{reddit}}/keycloak/user-provider/vietlinh",
+							"host": [
+								"{{reddit}}"
+							],
+							"path": [
+								"keycloak",
+								"user-provider",
+								"vietlinh"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 14:05:01 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": \"vietlinh\",\n    \"email\": \"vietkun1111@gmail.com\",\n    \"created\": 1684676225,\n    \"enabled\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "getCredentialData",
+			"id": "f1a144e3-e6ef-43a6-8f38-1ad5654928ad",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "password",
+							"value": "{{pwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{admin}}",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{client-secret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{client-id}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{keycloak}}/realms/{{realm}}/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "tokenName",
+							"value": "keycloak-demo",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{reddit}}/keycloak/user-provider/credentials/{username}",
+					"host": [
+						"{{reddit}}"
+					],
+					"path": [
+						"keycloak",
+						"user-provider",
+						"credentials",
+						"{username}"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "a6a0b3a3-ca3f-4037-9b6b-0ce7ebcb9d9d",
+					"name": "getCredentialData",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{reddit}}/keycloak/user-provider/credentials/user5",
+							"host": [
+								"{{reddit}}"
+							],
+							"path": [
+								"keycloak",
+								"user-provider",
+								"credentials",
+								"user5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 14:05:21 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "64"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "bAVL8tlinZE+zzcZolPtJBfwii0euM3igxW85qvNDepPVPDy/mkOnszwUc/MZy7w"
+				}
+			]
+		},
+		{
+			"name": "updateCredentialData",
+			"id": "407d3581-0ae9-4dd7-a14f-c1e04a35810a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "password",
+							"value": "{{pwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{admin}}",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{client-secret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{client-id}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{keycloak}}/realms/{{realm}}/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "tokenName",
+							"value": "keycloak-demo",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"username\",\r\n    \"password\":\"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{reddit}}/keycloak/user-provider/credentials/update",
+					"host": [
+						"{{reddit}}"
+					],
+					"path": [
+						"keycloak",
+						"user-provider",
+						"credentials",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserCount",
+			"id": "7bf142f1-0c86-4975-9144-bc7c021d2e66",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "password",
+							"value": "{{pwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{admin}}",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{client-secret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{client-id}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{keycloak}}/realms/{{realm}}/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "tokenName",
+							"value": "keycloak-demo",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{reddit}}/keycloak/user-provider/count",
+					"host": [
+						"{{reddit}}"
+					],
+					"path": [
+						"keycloak",
+						"user-provider",
+						"count"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "c9f0bcf1-ed92-4057-9536-0e672bfc20fc",
+					"name": "getUserCount",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{reddit}}/keycloak/user-provider/count",
+							"host": [
+								"{{reddit}}"
+							],
+							"path": [
+								"keycloak",
+								"user-provider",
+								"count"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 14:05:50 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "3"
+				}
+			]
+		},
+		{
+			"name": "deleteUser",
+			"id": "21602a74-a046-4b9f-91e2-61b485f59af5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "password",
+							"value": "{{pwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{admin}}",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{client-secret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{client-id}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{keycloak}}/realms/{{realm}}/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "tokenName",
+							"value": "keycloak-demo",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{reddit}}/keycloak/user-provider/delete/{username}",
+					"host": [
+						"{{reddit}}"
+					],
+					"path": [
+						"keycloak",
+						"user-provider",
+						"delete",
+						"{username}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addUser",
+			"id": "39d830d6-b13e-4e2d-896d-c6a3d37a820d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "password",
+							"value": "{{pwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{admin}}",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{client-secret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{client-id}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{keycloak}}/realms/{{realm}}/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "tokenName",
+							"value": "keycloak-demo",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"username\",\r\n    \"email\":\"email\",\r\n    \"created\":\"long-type\",\r\n    \"enabled\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{reddit}}/keycloak/user-provider/add",
+					"host": [
+						"{{reddit}}"
+					],
+					"path": [
+						"keycloak",
+						"user-provider",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"id": "05d25b1f-e6e8-4ffc-8b1d-933447e58064",
+			"key": "provider",
+			"value": "http://localhost:8080/keycloak/user-provider"
+		}
+	]
+}
