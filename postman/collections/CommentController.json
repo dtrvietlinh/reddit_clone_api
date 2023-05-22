@@ -594,9 +594,41 @@
 			]
 		}
 	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "fad4b7cd-a64e-46df-b5d8-2fe2ea23eeef",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f0675810-6f31-4825-8dfd-06cba43d5bf9",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
 	"variable": [
 		{
-			"id": "c48a4833-73e9-41ce-ab5d-1d830d399a6a",
+			"id": "1b102d81-671a-4c66-aece-163e86d32603",
 			"key": "comment",
 			"value": "http://localhost:8080/api/comments"
 		}

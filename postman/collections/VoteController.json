@@ -641,9 +641,41 @@
 			]
 		}
 	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "5b538134-9312-47a8-bff0-e933ef36c1f6",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "98ff1d4e-4cb7-4568-9396-a8b0f306cd3d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
 	"variable": [
 		{
-			"id": "3544f090-12f3-4499-9cdf-e0ffa54e775e",
+			"id": "f5b48ca4-c9bb-4325-8088-a2645561a5da",
 			"key": "vote",
 			"value": "http://localhost:8080/api/votes"
 		}

@@ -1162,9 +1162,41 @@
 			]
 		}
 	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "acdea4c2-880e-4419-8b9b-9fb05b2cfcef",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f00517c5-03c8-41ee-b4e3-4810f1fdec5f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
 	"variable": [
 		{
-			"id": "c880a03a-6495-44dd-b0a2-69bc270f46d0",
+			"id": "dce28d24-72ff-47a5-86c6-78c7be10296b",
 			"key": "post",
 			"value": "http://localhost:8080/api/posts"
 		}

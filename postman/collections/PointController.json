@@ -193,9 +193,41 @@
 			]
 		}
 	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ac8b2421-d1c8-4c09-ab97-94a445cc4adc",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a2b8b391-1e56-4eb3-ab6e-e8baf1aea05d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
 	"variable": [
 		{
-			"id": "9ded213e-bb15-42dc-a0b0-a8eea4853590",
+			"id": "bf7121f7-cd31-4e9b-80be-19773ce2a064",
 			"key": "voteComment",
 			"value": "http://localhost:8080/api/points"
 		}

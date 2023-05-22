@@ -702,9 +702,41 @@
 			]
 		}
 	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "21fc758a-b281-415e-90b1-c30d24f4b31d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "4ce99f6f-1db1-4beb-aca3-237c20f74f14",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
 	"variable": [
 		{
-			"id": "82213af8-fcea-4d46-885c-a81d00abeec8",
+			"id": "fd63ebd6-f272-4227-b03a-ad3f7fdbe63e",
 			"key": "subreddit",
 			"value": "http://localhost:8080/api/subreddit"
 		}
